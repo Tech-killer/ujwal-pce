@@ -77,8 +77,8 @@ export default function AdminProjects() {
             const token = localStorage.getItem('token');
             const method = editingProject ? 'PUT' : 'POST';
             const url = editingProject
-                ? `http://localhost:5001/api/projects/${editingProject._id}`
-                : 'http://localhost:5001/api/projects';
+                ? `https://ujwal-pce.onrender.com/api/projects/${editingProject._id}`
+                : 'https://ujwal-pce.onrender.com/api/projects';
 
             const response = await fetch(url, {
                 method,
@@ -122,7 +122,7 @@ export default function AdminProjects() {
     const handleDelete = async (projectId) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:5001/api/projects/${projectId}`, {
+            const response = await fetch(`https://ujwal-pce.onrender.com/api/projects/${projectId}`, {
                 method: 'DELETE',
                 headers: {
                     'x-auth-token': token

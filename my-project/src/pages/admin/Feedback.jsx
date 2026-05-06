@@ -20,7 +20,7 @@ export default function AdminFeedback() {
 
     const fetchProjects = async () => {
         try {
-            const response = await fetch('http://localhost:5001/api/projects');
+            const response = await fetch('https://ujwal-pce.onrender.com/api/projects');
             if (response.ok) {
                 const data = await response.json();
                 setProjects(data);
@@ -60,7 +60,7 @@ export default function AdminFeedback() {
         try {
             setLoading(true);
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:5001/api/feedback', {
+            const response = await fetch('https://ujwal-pce.onrender.com/api/feedback', {
                 headers: {
                     'x-auth-token': token
                 }
@@ -80,7 +80,7 @@ export default function AdminFeedback() {
     const handleDeleteFeedback = async (feedbackId) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:5001/api/feedback/${feedbackId}`, {
+            const response = await fetch(`https://ujwal-pce.onrender.com/api/feedback/${feedbackId}`, {
                 method: 'DELETE',
                 headers: {
                     'x-auth-token': token

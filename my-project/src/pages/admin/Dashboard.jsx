@@ -23,7 +23,7 @@ export default function AdminDashboard() {
             const token = localStorage.getItem('token');
 
             // Fetch all feedback
-            const feedbackRes = await fetch('http://localhost:5001/api/feedback', {
+            const feedbackRes = await fetch('https://ujwal-pce.onrender.com/api/feedback', {
                 headers: {
                     'x-auth-token': token
                 }

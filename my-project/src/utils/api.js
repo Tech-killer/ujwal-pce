@@ -1,5 +1,5 @@
 // API Configuration and utilities
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://ujwal-pce.onrender.com/api';
 const API_TIMEOUT = 15000; // 15 seconds timeout
 
 // Reusable fetch wrapper with error handling and timeout
